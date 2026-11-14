@@ -1,24 +1,49 @@
 [gd_scene format=3 uid="uid://dmwn2erw3utmf"]
 
-[ext_resource type="Texture2D" uid="uid://bqaqdh7p8dp3v" path="res://fondo.png" id="1_xtb1e"]
+[ext_resource type="Texture2D" uid="uid://cr6te5ydcjum2" path="res://fondo8.png" id="1_5lfti"]
+[ext_resource type="Script" uid="uid://dcpq5bg61iix6" path="res://jugador.gd" id="1_dn5c8"]
 [ext_resource type="Texture2D" uid="uid://bqv6nt8isqskr" path="res://perro.png" id="2_dn5c8"]
+[ext_resource type="Texture2D" uid="uid://cyfgnd5l4iru5" path="res://fondo7.png" id="2_sbvtr"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_48d6w"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7ksya"]
 
 [node name="Node2D" type="Node2D" unique_id=951205427]
 position = Vector2(0, 1)
 
-[node name="Jugador" type="CharacterBody2D" parent="." unique_id=18876813]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=36413890]
+position = Vector2(440.00003, -105)
+scale = Vector2(0.46388263, 0.44223827)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Jugador" unique_id=1825552872]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=323836791]
+position = Vector2(327.66904, 1501.453)
+shape = SubResource("WorldBoundaryShape2D_48d6w")
 
-[node name="Sprite2D2" type="Sprite2D" parent="Jugador" unique_id=56417468]
-position = Vector2(568.00006, 314.99997)
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1352296074]
+position = Vector2(5691.0947, 596.96326)
+scale = Vector2(2.1557178, 2.2612245)
+texture = ExtResource("1_5lfti")
+
+[node name="background" type="Sprite2D" parent="." unique_id=56417468]
+position = Vector2(-21304, -5072.9995)
 scale = Vector2(0.6166667, 0.6148148)
-texture = ExtResource("1_xtb1e")
+texture = ExtResource("2_sbvtr")
 
-[node name="Sprite2D" type="Sprite2D" parent="Jugador" unique_id=881553505]
-position = Vector2(574.75, 513.5)
+[node name="Jugador" type="CharacterBody2D" parent="." unique_id=18876813]
+position = Vector2(624, 311)
+script = ExtResource("1_dn5c8")
+
+[node name="Camera2D" type="Camera2D" parent="Jugador" unique_id=124594578]
+position = Vector2(-40, -152)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jugador" unique_id=926263051]
+visible = false
+position = Vector2(16, 8)
+scale = Vector2(8.949454, 6.7807026)
+shape = SubResource("CircleShape2D_7ksya")
+
+[node name="perro" type="Sprite2D" parent="Jugador" unique_id=881553505]
+position = Vector2(-8, 0)
 scale = Vector2(0.46388263, 0.44223827)
 texture = ExtResource("2_dn5c8")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Jugador/Sprite2D" unique_id=1686084273]
-position = Vector2(-49.58142, 0)
