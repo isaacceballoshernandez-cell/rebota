@@ -19,3 +19,6 @@ texture = ExtResource("1_xtb1e")
 position = Vector2(574.75, 513.5)
 scale = Vector2(0.46388263, 0.44223827)
 texture = ExtResource("2_dn5c8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Jugador/Sprite2D" unique_id=1686084273]
+position = Vector2(-49.58142, 0)
