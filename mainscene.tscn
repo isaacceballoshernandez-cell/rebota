@@ -11,7 +11,7 @@ position = Vector2(0, 1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Jugador" unique_id=1825552872]
 
 [node name="Sprite2D2" type="Sprite2D" parent="Jugador" unique_id=56417468]
-position = Vector2(568.00006, 314.99997)
+position = Vector2(558, 318)
 scale = Vector2(0.6166667, 0.6148148)
 texture = ExtResource("1_xtb1e")
 
@@ -22,3 +22,7 @@ texture = ExtResource("2_dn5c8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Jugador/Sprite2D" unique_id=1686084273]
 position = Vector2(-49.58142, 0)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1049791199]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=2068208313]
