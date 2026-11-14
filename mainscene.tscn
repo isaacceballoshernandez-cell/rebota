@@ -4,10 +4,14 @@
 [ext_resource type="Script" uid="uid://dcpq5bg61iix6" path="res://jugador.gd" id="1_dn5c8"]
 [ext_resource type="Texture2D" uid="uid://bqv6nt8isqskr" path="res://perro.png" id="2_dn5c8"]
 [ext_resource type="Texture2D" uid="uid://cyfgnd5l4iru5" path="res://fondo7.png" id="2_sbvtr"]
+[ext_resource type="Texture2D" uid="uid://duhj5p3f1mfmo" path="res://icon.svg" id="5_sbvtr"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_48d6w"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7ksya"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ahry"]
+size = Vector2(126, 130)
 
 [node name="Node2D" type="Node2D" unique_id=951205427]
 position = Vector2(0, 1)
@@ -47,3 +51,30 @@ shape = SubResource("CircleShape2D_7ksya")
 position = Vector2(-8, 0)
 scale = Vector2(0.46388263, 0.44223827)
 texture = ExtResource("2_dn5c8")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1693383040]
+position = Vector2(613, 566)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2" unique_id=863980402]
+texture = ExtResource("5_sbvtr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1620882175]
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1034355282]
+position = Vector2(457, 502)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3" unique_id=862630585]
+texture = ExtResource("5_sbvtr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=383855613]
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=814046759]
+position = Vector2(298, 444)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D4" unique_id=890364863]
+texture = ExtResource("5_sbvtr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=1923513292]
+shape = SubResource("RectangleShape2D_6ahry")
