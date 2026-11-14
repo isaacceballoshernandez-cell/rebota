@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dmwn2erw3utmf"]
+
+[ext_resource type="Texture2D" uid="uid://bqaqdh7p8dp3v" path="res://fondo.png" id="1_xtb1e"]
+[ext_resource type="Texture2D" uid="uid://bqv6nt8isqskr" path="res://perro.png" id="2_dn5c8"]
+
+[node name="Node2D" type="Node2D" unique_id=951205427]
+position = Vector2(0, 1)
+
+[node name="Jugador" type="CharacterBody2D" parent="." unique_id=18876813]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jugador" unique_id=1825552872]
+
+[node name="Sprite2D2" type="Sprite2D" parent="Jugador" unique_id=56417468]
+position = Vector2(568.00006, 314.99997)
+scale = Vector2(0.6166667, 0.6148148)
+texture = ExtResource("1_xtb1e")
+
+[node name="Sprite2D" type="Sprite2D" parent="Jugador" unique_id=881553505]
+position = Vector2(574.75, 513.5)
+scale = Vector2(0.46388263, 0.44223827)
+texture = ExtResource("2_dn5c8")
