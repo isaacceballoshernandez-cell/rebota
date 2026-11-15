@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://hu25kdllu2b"]
+
+[ext_resource type="Script" uid="uid://cmyk2vt45xv7c" path="res://GeneradorMapa.gd" id="1_0e48y"]
+[ext_resource type="PackedScene" uid="uid://dgi46nm23q5du" path="res://Plataforma.tscn" id="2_epypp"]
+
+[node name="GeneradorMapa" type="Node2D" unique_id=972482851]
+script = ExtResource("1_0e48y")
+plataforma_escena = ExtResource("2_epypp")
