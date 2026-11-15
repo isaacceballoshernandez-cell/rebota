@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://dmwn2erw3utmf"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://d0e8000n7g02p" path="res://fondo 12.png" id="1_5lfti"]
 [ext_resource type="Script" uid="uid://vb74fe8hstpl" path="res://node_2d.gd" id="1_76yo1"]
+=======
+[ext_resource type="Texture2D" uid="uid://cbg1t0ihs625m" path="res://fondo 12.png" id="1_5lfti"]
+>>>>>>> Stashed changes
 [ext_resource type="Script" uid="uid://dcpq5bg61iix6" path="res://jugador.gd" id="1_dn5c8"]
 [ext_resource type="Texture2D" uid="uid://cy1wylhj7plcc" path="res://escenario 18.png" id="2_8bn17"]
 [ext_resource type="Texture2D" uid="uid://bqv6nt8isqskr" path="res://perro.png" id="2_dn5c8"]
@@ -32,11 +36,33 @@ radius = 32.0
 
 [node name="Node2D" type="Node2D" unique_id=951205427]
 position = Vector2(0, 1)
+<<<<<<< Updated upstream
 script = ExtResource("1_76yo1")
 metadata/_edit_horizontal_guides_ = [41272.0]
 
 [node name="background" type="Sprite2D" parent="." unique_id=56417468]
 position = Vector2(-21384, -4273)
+=======
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=36413890]
+position = Vector2(440.00003, -105)
+scale = Vector2(0.46388263, 0.44223827)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=323836791]
+position = Vector2(327.66904, 1501.453)
+shape = SubResource("WorldBoundaryShape2D_48d6w")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1352296074]
+position = Vector2(5691.0947, 596.96326)
+scale = Vector2(2.1557178, 2.2612245)
+
+[node name="Fondo12" type="Sprite2D" parent="StaticBody2D" unique_id=579981561]
+position = Vector2(413.89777, -2243.1348)
+texture = ExtResource("1_5lfti")
+
+[node name="background" type="Sprite2D" parent="." unique_id=56417468]
+position = Vector2(-21032, -4409)
+>>>>>>> Stashed changes
 scale = Vector2(0.6166667, 0.6148148)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=36413890]
