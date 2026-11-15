@@ -1,0 +1,1196 @@
+[gd_scene format=3 uid="uid://dmwn2erw3utmf"]
+
+[ext_resource type="Texture2D" uid="uid://ckvn5khlv1df7" path="res://fondo 12.png" id="1_5lfti"]
+[ext_resource type="Script" uid="uid://vb74fe8hstpl" path="res://node_2d.gd" id="1_76yo1"]
+[ext_resource type="Script" uid="uid://dcpq5bg61iix6" path="res://jugador.gd" id="1_dn5c8"]
+[ext_resource type="Texture2D" uid="uid://cy1wylhj7plcc" path="res://escenario 18.png" id="2_8bn17"]
+[ext_resource type="Texture2D" uid="uid://bqv6nt8isqskr" path="res://perro.png" id="2_dn5c8"]
+[ext_resource type="Script" uid="uid://bbq53tf33a4y8" path="res://elio.gd" id="5_8bn17"]
+[ext_resource type="Texture2D" uid="uid://kxsn485a0uyj" path="res://moneda 3.png" id="5_76yo1"]
+[ext_resource type="Texture2D" uid="uid://bkkjn5jck26p4" path="res://plataforma.png" id="5_fl65m"]
+[ext_resource type="Script" uid="uid://ci0fb0damuk21" path="res://carbono.gd" id="9_0lhry"]
+[ext_resource type="Texture2D" uid="uid://drmphlstblfyx" path="res://carbono 1.png" id="10_0ibrq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ksya"]
+size = Vector2(52.357872, 51853.547)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_76yo1"]
+size = Vector2(17.771235, 4.1054688)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_48d6w"]
+size = Vector2(11.962852, 19.483147)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5lfti"]
+size = Vector2(13.393389, 15.027771)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sbvtr"]
+radius = 127.656395
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ahry"]
+size = Vector2(251.5, 131)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_48d6w"]
+radius = 32.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4ofsq"]
+radius = 25.298222
+
+[node name="Node2D" type="Node2D" unique_id=951205427]
+position = Vector2(352, -488)
+script = ExtResource("1_76yo1")
+metadata/_edit_horizontal_guides_ = [41272.0]
+
+[node name="background" type="Sprite2D" parent="." unique_id=56417468]
+position = Vector2(-21384, -4273)
+scale = Vector2(0.6166667, 0.6148148)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=36413890]
+position = Vector2(448.00003, -97)
+scale = Vector2(0.46388263, 0.44223827)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1352296074]
+position = Vector2(4604.613, -24491.324)
+scale = Vector2(1, 1.049)
+texture = ExtResource("2_8bn17")
+
+[node name="Sprite2D7" type="Sprite2D" parent="StaticBody2D" unique_id=942109052]
+position = Vector2(707.0753, -36394.406)
+scale = Vector2(1, 1.049)
+texture = ExtResource("2_8bn17")
+
+[node name="Sprite2D6" type="Sprite2D" parent="StaticBody2D" unique_id=1068189644]
+position = Vector2(4552.876, -36484.855)
+scale = Vector2(1, 1.049)
+texture = ExtResource("2_8bn17")
+
+[node name="Sprite2D5" type="Sprite2D" parent="StaticBody2D" unique_id=893155023]
+position = Vector2(689.8296, -30587.586)
+scale = Vector2(1, 1.049)
+texture = ExtResource("2_8bn17")
+
+[node name="Sprite2D4" type="Sprite2D" parent="StaticBody2D" unique_id=171974901]
+position = Vector2(4552.876, -30515.225)
+scale = Vector2(1, 1.049)
+texture = ExtResource("2_8bn17")
+
+[node name="Sprite2D3" type="Sprite2D" parent="StaticBody2D" unique_id=2122192009]
+position = Vector2(620.8467, -24545.592)
+scale = Vector2(1, 1.049)
+texture = ExtResource("2_8bn17")
+
+[node name="Sprite2D2" type="Sprite2D" parent="StaticBody2D" unique_id=1612126889]
+position = Vector2(500.12646, -2548.4)
+scale = Vector2(1, 1.049)
+texture = ExtResource("1_5lfti")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/Sprite2D2" unique_id=795227988]
+visibility_layer = 3
+z_index = -4
+position = Vector2(-17.24562, -6775.05)
+scale = Vector2(1, 1.049)
+texture = ExtResource("1_5lfti")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/Sprite2D2/Sprite2D" unique_id=485123515]
+visibility_layer = 3
+z_index = -8
+position = Vector2(3981.6152, -6986.6914)
+scale = Vector2(1, 1.049)
+texture = ExtResource("1_5lfti")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/Sprite2D2/Sprite2D/Sprite2D" unique_id=247966804]
+visibility_layer = 3
+z_index = 5
+position = Vector2(51.737473, 7061.912)
+scale = Vector2(1, 1.049)
+texture = ExtResource("1_5lfti")
+
+[node name="Sprite2D2" type="Sprite2D" parent="StaticBody2D/Sprite2D2/Sprite2D" unique_id=676465363]
+visibility_layer = 3
+z_index = -8
+position = Vector2(-2.0980835e-05, -6493.5127)
+scale = Vector2(1, 1.049)
+texture = ExtResource("1_5lfti")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/Sprite2D2/Sprite2D/Sprite2D2" unique_id=1879998879]
+visibility_layer = 3
+z_index = 5
+position = Vector2(4087.2407, 11816.216)
+scale = Vector2(1, 1.049)
+texture = ExtResource("1_5lfti")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=285236110]
+position = Vector2(2483.3867, 27245.494)
+scale = Vector2(152.50388, 1)
+shape = SubResource("RectangleShape2D_7ksya")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=968996971]
+position = Vector2(294557.3, -85944.62)
+scale = Vector2(23257.438, 1)
+shape = SubResource("RectangleShape2D_76yo1")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D/CollisionShape2D4" unique_id=2115326052]
+position = Vector2(8945.169, 958.7593)
+scale = Vector2(152.50388, 1)
+shape = SubResource("RectangleShape2D_7ksya")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D/CollisionShape2D4" unique_id=1863295562]
+position = Vector2(8893.828, 3039.086)
+scale = Vector2(152.50388, 1)
+shape = SubResource("RectangleShape2D_7ksya")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D/CollisionShape2D4/CollisionShape2D4" unique_id=1201781481]
+position = Vector2(8945.169, 958.7593)
+scale = Vector2(152.50388, 1)
+shape = SubResource("RectangleShape2D_7ksya")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=13674253]
+position = Vector2(-5380.672, -24346.604)
+scale = Vector2(152.50388, 1)
+shape = SubResource("RectangleShape2D_7ksya")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=1701433909]
+position = Vector2(-25109.8, -13277.91)
+scale = Vector2(152.50388, 1)
+shape = SubResource("RectangleShape2D_7ksya")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1987771085]
+position = Vector2(10623.377, -24294.598)
+scale = Vector2(152.50388, 1)
+shape = SubResource("RectangleShape2D_7ksya")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=686399102]
+position = Vector2(22643.66, -8086.1387)
+scale = Vector2(152.50388, 1)
+shape = SubResource("RectangleShape2D_7ksya")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D/CollisionShape2D5" unique_id=2062817364]
+position = Vector2(8945.169, 958.7593)
+scale = Vector2(152.50388, 1)
+shape = SubResource("RectangleShape2D_7ksya")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D/CollisionShape2D5" unique_id=665951851]
+position = Vector2(8893.828, 3039.086)
+scale = Vector2(152.50388, 1)
+shape = SubResource("RectangleShape2D_7ksya")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D/CollisionShape2D5/CollisionShape2D4" unique_id=965122989]
+position = Vector2(8945.169, 958.7593)
+scale = Vector2(152.50388, 1)
+shape = SubResource("RectangleShape2D_7ksya")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" unique_id=17097318]
+position = Vector2(-22850.61, 7507.2656)
+scale = Vector2(152.50388, 1)
+shape = SubResource("RectangleShape2D_7ksya")
+
+[node name="Jugador" type="CharacterBody2D" parent="." unique_id=18876813]
+position = Vector2(656, -297)
+scale = Vector2(0.6340544, 0.82434684)
+script = ExtResource("1_dn5c8")
+
+[node name="Camera2D" type="Camera2D" parent="Jugador" unique_id=124594578]
+position = Vector2(37.851654, 601.68854)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Jugador" unique_id=1090555001]
+position = Vector2(-44.487427, 756.99976)
+shape = SubResource("RectangleShape2D_48d6w")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Jugador" unique_id=1067011322]
+position = Vector2(151.40657, 756.96295)
+shape = SubResource("RectangleShape2D_48d6w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jugador" unique_id=926263051]
+position = Vector2(50.46887, 795.78156)
+scale = Vector2(8.949454, 6.7807026)
+shape = SubResource("RectangleShape2D_5lfti")
+
+[node name="perro" type="Sprite2D" parent="Jugador" unique_id=881553505]
+position = Vector2(37.851654, 756.9628)
+scale = Vector2(0.46388263, 0.44223827)
+texture = ExtResource("2_dn5c8")
+
+[node name="pickupArea" type="Area2D" parent="Jugador/perro" unique_id=22006837]
+position = Vector2(-81.59741, -1711.6628)
+scale = Vector2(2.1557178, 2.2612245)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jugador/perro/pickupArea" unique_id=1391586256]
+position = Vector2(50.468853, 795.7815)
+shape = SubResource("CircleShape2D_sbvtr")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=814046759]
+position = Vector2(320, 287)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D4" unique_id=890364863]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=1923513292]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="." unique_id=1625191152]
+position = Vector2(-80, -17)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5" unique_id=847325320]
+position = Vector2(-1.5258789e-05, 8.999998)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5" unique_id=942337814]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5" unique_id=1246163350]
+position = Vector2(560, -280)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D4" unique_id=1891454620]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D4" unique_id=1885590085]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D4" unique_id=1111666037]
+position = Vector2(512, -232)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4" unique_id=1308998612]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4" unique_id=1701127179]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4" unique_id=1110883943]
+position = Vector2(-1008, -352)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=959521822]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=841647710]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=417283502]
+position = Vector2(672, -40)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1365257324]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=796986310]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=225317998]
+position = Vector2(688, -248)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1302073750]
+position = Vector2(7.9999847, 17.000183)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=314081708]
+position = Vector2(8, 9)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=899029181]
+position = Vector2(-1208, -176)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1859866934]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=135885960]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1310103088]
+position = Vector2(704, -159)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=737571280]
+position = Vector2(-1.5258789e-05, 7.9999695)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1719357157]
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=736951469]
+position = Vector2(1147.5, -439)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1344389248]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1506575955]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=209436335]
+position = Vector2(-1344, -160)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1333645204]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=276980852]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1774526423]
+position = Vector2(776, -192)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1210895114]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=199539163]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=194487023]
+position = Vector2(568, -272)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1129968348]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=804954748]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1336909650]
+position = Vector2(-1328, -32)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=765007902]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=398136665]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=2095549373]
+position = Vector2(904, -328)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1182608229]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=971948796]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1582211582]
+position = Vector2(-906, -263)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=715125281]
+position = Vector2(87.99999, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=110734379]
+position = Vector2(88, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=277111933]
+position = Vector2(846, -2170)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5" unique_id=1889351120]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5" unique_id=1260722677]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5" unique_id=1295680152]
+position = Vector2(-1007, -282)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4" unique_id=82243930]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4" unique_id=6260905]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4" unique_id=2125751714]
+position = Vector2(776, -192)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4" unique_id=1127689073]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4" unique_id=1722581378]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4" unique_id=1422974922]
+position = Vector2(385, -267)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=2002364477]
+position = Vector2(649.99994, -1328.9999)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=225223928]
+position = Vector2(648, -1329)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=997915568]
+position = Vector2(-1344, -160)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=542062218]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=959627743]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1512973700]
+position = Vector2(776, -192)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=221614315]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1649503506]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=940166924]
+position = Vector2(482, -963)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1347607133]
+position = Vector2(-10.000013, 633.9999)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=326341915]
+position = Vector2(-1, 628)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1636071109]
+position = Vector2(-1328, -32)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1402902009]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1624593500]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=2130309913]
+position = Vector2(904, -328)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=75476952]
+position = Vector2(771.99994, -118.00002)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=698146945]
+position = Vector2(776, -124)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1628479413]
+position = Vector2(-1112, -152)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=376531565]
+position = Vector2(87.99999, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=921098661]
+position = Vector2(88, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5" unique_id=803361526]
+position = Vector2(-1007, -282)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5" unique_id=903636032]
+position = Vector2(-725.99994, -14.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5" unique_id=2095624877]
+position = Vector2(-722, -14)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5" unique_id=2131573193]
+position = Vector2(776, -192)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4" unique_id=648311035]
+position = Vector2(908.99994, 41.999966)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4" unique_id=1815849081]
+position = Vector2(907, 42)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4" unique_id=1501741936]
+position = Vector2(545, -819)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4" unique_id=838977161]
+position = Vector2(696.99994, -147.00002)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4" unique_id=1763446094]
+position = Vector2(695, -147)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4" unique_id=1312494312]
+position = Vector2(-1344, -160)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1493533500]
+position = Vector2(19.499985, -8.000032)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1560640551]
+position = Vector2(8.5, -15)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=786238846]
+position = Vector2(776, -192)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=912063496]
+position = Vector2(-356, -291)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1048211036]
+position = Vector2(-352, -289)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1217646330]
+position = Vector2(568, -272)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=2103203975]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=184696184]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=454264672]
+position = Vector2(-1328, -32)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1739541981]
+position = Vector2(-761.99994, 358.99994)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=430692228]
+position = Vector2(-765, 360)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1158072618]
+position = Vector2(904, -328)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=692891845]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1056684319]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1755646782]
+position = Vector2(-1112, -152)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=518339833]
+position = Vector2(-537.99994, -14.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1157882509]
+position = Vector2(-541, -17)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="elio5" type="Area2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=2056188963 groups=["elio"]]
+position = Vector2(624, -2799)
+script = ExtResource("5_8bn17")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/elio5" unique_id=1820274844]
+position = Vector2(-6.1035156e-05, 8)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_76yo1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/elio5" unique_id=244395135]
+shape = SubResource("CircleShape2D_48d6w")
+
+[node name="elio6" type="Area2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=2104692339 groups=["elio"]]
+position = Vector2(-160, -2559)
+script = ExtResource("5_8bn17")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/elio6" unique_id=667498381]
+position = Vector2(7.9999237, -7.9999695)
+scale = Vector2(0.1626668, 0.14540805)
+texture = ExtResource("5_76yo1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/elio6" unique_id=1603226424]
+position = Vector2(8, 0)
+shape = SubResource("CircleShape2D_48d6w")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="StaticBody2D5" unique_id=451976154]
+position = Vector2(560, -280)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D5" unique_id=1379942609]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D5" unique_id=1502518981]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D5" unique_id=1734293407]
+position = Vector2(512, -232)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4" unique_id=1301041275]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4" unique_id=377606501]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4" unique_id=903092393]
+position = Vector2(-1008, -352)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4" unique_id=235553164]
+position = Vector2(7.9999847, -7.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4" unique_id=1013115331]
+position = Vector2(8, -7)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4" unique_id=1038561911]
+position = Vector2(672, -40)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1405332985]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=49894232]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=815739069]
+position = Vector2(688, -248)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=196951418]
+position = Vector2(455.99994, 88.99996)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=762633540]
+position = Vector2(464, 81)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=2133673410]
+position = Vector2(-1208, -176)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=823763883]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=509636823]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=2069062783]
+position = Vector2(704, -159)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=34461478]
+position = Vector2(-1.5258789e-05, 7.9999695)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=2046329474]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=28929440]
+position = Vector2(1147.5, -439)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=677528035]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=260665956]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=380610628]
+position = Vector2(-1344, -160)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1361648269]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=229341886]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1374962126]
+position = Vector2(776, -192)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=332849305]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=352506118]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1849161689]
+position = Vector2(568, -272)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1825649615]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1368845791]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=328823159]
+position = Vector2(-1328, -32)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1845615432]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=48085737]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=310805314]
+position = Vector2(904, -328)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=365469476]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=2028608702]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1540959671]
+position = Vector2(-906, -263)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1793241997]
+position = Vector2(87.99999, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1406843304]
+position = Vector2(88, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=200007126]
+visible = false
+position = Vector2(846, -2170)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5" unique_id=490171189]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5" unique_id=978839119]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5" unique_id=1018280554]
+position = Vector2(-1007, -282)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4" unique_id=1486425789]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4" unique_id=1705114052]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4" unique_id=522946630]
+position = Vector2(776, -192)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4" unique_id=1651729189]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4" unique_id=1283747777]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4" unique_id=1478386757]
+position = Vector2(385, -267)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=868345784]
+position = Vector2(649.99994, -1328.9999)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=414087438]
+position = Vector2(648, -1329)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=425092655]
+position = Vector2(-1344, -160)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=572270816]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=763742811]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1538275878]
+position = Vector2(776, -192)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=14229134]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=283108056]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1550492766]
+position = Vector2(482, -963)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=483855327]
+position = Vector2(-10.000013, 633.9999)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1615989575]
+position = Vector2(-1, 628)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=311310781]
+position = Vector2(-1328, -32)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1344208809]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1088216868]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1612437921]
+position = Vector2(904, -328)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=199206109]
+position = Vector2(771.99994, -118.00002)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1742736588]
+position = Vector2(776, -124)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1228566543]
+position = Vector2(-1112, -152)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1777774933]
+position = Vector2(87.99999, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1299897619]
+position = Vector2(88, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5" unique_id=2006909253]
+position = Vector2(-1007, -282)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5" unique_id=1685734768]
+position = Vector2(-725.99994, -14.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5" unique_id=1789802716]
+position = Vector2(-722, -14)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5" unique_id=456299983]
+position = Vector2(776, -192)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4" unique_id=789379557]
+position = Vector2(908.99994, 41.999966)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4" unique_id=1438844540]
+position = Vector2(907, 42)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4" unique_id=1842675830]
+position = Vector2(545, -763)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4" unique_id=2114687199]
+position = Vector2(696.99994, -147.00002)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4" unique_id=1161059874]
+position = Vector2(695, -147)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4" unique_id=818364106]
+position = Vector2(-1344, -160)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=140275391]
+position = Vector2(19.499985, -8.000032)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=924021454]
+position = Vector2(8.5, -15)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=167476970]
+position = Vector2(776, -192)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=879520485]
+position = Vector2(-356, -291)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=863332893]
+position = Vector2(-352, -289)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=191668326]
+position = Vector2(568, -272)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=877082308]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1558386245]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1753425684]
+position = Vector2(-1328, -32)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=2015915180]
+position = Vector2(-761.99994, 358.99994)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1593570904]
+position = Vector2(-765, 360)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=293407911]
+position = Vector2(904, -328)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=853559153]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=2097826680]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=234907887]
+position = Vector2(-1112, -152)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=948238736]
+position = Vector2(-537.99994, -14.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1157731327]
+position = Vector2(-541, -17)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="elio5" type="Area2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=571058159 groups=["elio"]]
+position = Vector2(624, -2799)
+script = ExtResource("5_8bn17")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/elio5" unique_id=13208174]
+position = Vector2(-6.1035156e-05, 8)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_76yo1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/elio5" unique_id=1328098826]
+shape = SubResource("CircleShape2D_48d6w")
+
+[node name="elio6" type="Area2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=1867345343 groups=["elio"]]
+position = Vector2(-160, -2559)
+script = ExtResource("5_8bn17")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/elio6" unique_id=1238495941]
+position = Vector2(7.9999237, -7.9999695)
+scale = Vector2(0.1626668, 0.14540805)
+texture = ExtResource("5_76yo1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/elio6" unique_id=1623393313]
+position = Vector2(8, 0)
+shape = SubResource("CircleShape2D_48d6w")
+
+[node name="elio5" type="Area2D" parent="." unique_id=1022493535 groups=["elio"]]
+position = Vector2(504, -408)
+scale = Vector2(0.96000123, 1)
+script = ExtResource("5_8bn17")
+
+[node name="Sprite2D" type="Sprite2D" parent="elio5" unique_id=10378734]
+position = Vector2(0, -16.000015)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_76yo1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="elio5" unique_id=995207869]
+position = Vector2(-8.333282, -16)
+shape = SubResource("CircleShape2D_48d6w")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="." unique_id=295429994]
+position = Vector2(1024, -41)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D6" unique_id=782801716]
+position = Vector2(7.9999847, -8.0000305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_fl65m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6" unique_id=697325817]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="elio4" type="Area2D" parent="." unique_id=1765503706 groups=["elio"]]
+position = Vector2(1008, -704)
+scale = Vector2(0.96000123, 1)
+script = ExtResource("5_8bn17")
+
+[node name="Sprite2D" type="Sprite2D" parent="elio4" unique_id=564446628]
+position = Vector2(-12.5, -8.800064)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_76yo1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="elio4" unique_id=1987671762]
+position = Vector2(-12.499939, -8.800049)
+shape = SubResource("CircleShape2D_48d6w")
+
+[node name="elio3" type="Area2D" parent="." unique_id=1202924496 groups=["elio"]]
+position = Vector2(-72, -136)
+scale = Vector2(0.96000123, 1)
+script = ExtResource("5_8bn17")
+
+[node name="Sprite2D" type="Sprite2D" parent="elio3" unique_id=680347880]
+position = Vector2(8.333313, 0)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_76yo1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="elio3" unique_id=1751043123]
+position = Vector2(8.333313, 0)
+shape = SubResource("CircleShape2D_48d6w")
+
+[node name="elio2" type="Area2D" parent="." unique_id=833001589 groups=["elio"]]
+position = Vector2(1040, -160)
+scale = Vector2(0.96000123, 1)
+script = ExtResource("5_8bn17")
+
+[node name="Sprite2D" type="Sprite2D" parent="elio2" unique_id=961821668]
+position = Vector2(0, -1.5258789e-05)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_76yo1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="elio2" unique_id=415544438]
+shape = SubResource("CircleShape2D_48d6w")
+
+[node name="helio" type="Area2D" parent="." unique_id=1643182164 groups=["elio"]]
+position = Vector2(328, 184)
+scale = Vector2(0.96000123, 1)
+script = ExtResource("5_8bn17")
+
+[node name="Sprite2D" type="Sprite2D" parent="helio" unique_id=2044665873]
+position = Vector2(-8.333313, -7.9999847)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_76yo1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="helio" unique_id=1962809416]
+position = Vector2(-8.333323, -8)
+shape = SubResource("CircleShape2D_48d6w")
+
+[node name="elio6" type="Area2D" parent="." unique_id=77714599 groups=["elio"]]
+position = Vector2(-80, -16)
+scale = Vector2(0.96000123, 1)
+script = ExtResource("5_8bn17")
+
+[node name="Sprite2D" type="Sprite2D" parent="elio6" unique_id=395104408]
+position = Vector2(1583.3313, -1632)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_76yo1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="elio6" unique_id=165368194]
+position = Vector2(1583.3313, -1624)
+shape = SubResource("CircleShape2D_48d6w")
+
+[node name="GenerarMapa" type="Node2D" parent="." unique_id=914510207]
+position = Vector2(96, 16)
+
+[node name="carbono" type="Area2D" parent="." unique_id=1654238326]
+script = ExtResource("9_0lhry")
+
+[node name="Sprite2D" type="Sprite2D" parent="carbono" unique_id=1576934274]
+position = Vector2(552.00006, 210.62498)
+scale = Vector2(0.119744055, 0.1058559)
+texture = ExtResource("10_0ibrq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="carbono" unique_id=1679292572]
+position = Vector2(552, 208)
+shape = SubResource("CircleShape2D_4ofsq")
+
+[connection signal="area_entered" from="Jugador/perro/pickupArea" to="Jugador" method="_on_pickup_area_area_entered"]

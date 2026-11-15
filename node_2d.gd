@@ -1,4 +1,3 @@
-
 extends Node2D
 
 @export var plataforma_escena: PackedScene

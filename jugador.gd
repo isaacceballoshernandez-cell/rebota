@@ -5,20 +5,20 @@ extends CharacterBody2D
 # NODOS
 # =====================================
 
-@onready var sprite: Sprite2D = $perro
-@onready var pickup_area: Area2D = $perro/pickupArea
+@onready var sprite = get_node_or_null("perro")
+@onready var pickup_area = get_node_or_null("perro/pickupArea")
 
 var hud: CanvasLayer
 var contador: Label
 
 
 # =====================================
-# HELIO
+# MONEDAS Y RECURSOS
 # =====================================
 
 var helio: int = 0
+var moneda_carbono: int = 0
 
-# Cuánto aumenta el salto por cada moneda
 @export var aumento_salto_por_moneda: float = 12.0
 
 
@@ -72,7 +72,10 @@ var fuerza_repulsion: float = 900.0
 
 func _ready():
 
-	# Crear el HUD si todavía no existe
+	# Grupo para el mapa infinito
+	add_to_group("jugador")
+
+	# Crear HUD
 	hud = get_node_or_null("CanvasLayer")
 
 	if hud == null:
@@ -80,7 +83,7 @@ func _ready():
 		hud.name = "CanvasLayer"
 		add_child(hud)
 
-	# Crear el contador si todavía no existe
+	# Crear contador
 	contador = hud.get_node_or_null("Contador")
 
 	if contador == null:
@@ -89,15 +92,25 @@ func _ready():
 		hud.add_child(contador)
 
 	contador.position = Vector2(25, 25)
+
 	actualizar_contador()
 
-	# Conectar el detector de monedas
-	if not pickup_area.area_entered.is_connected(
-		_on_pickup_area_area_entered
-	):
-		pickup_area.area_entered.connect(
+	# Comprobar sprite
+	if sprite == null:
+		push_error("No se encontró el nodo perro")
+		set_physics_process(false)
+		return
+
+	# Conectar detector de monedas
+	if pickup_area == null:
+		push_error("No se encontró perro/pickupArea")
+	else:
+		if not pickup_area.area_entered.is_connected(
 			_on_pickup_area_area_entered
-		)
+		):
+			pickup_area.area_entered.connect(
+				_on_pickup_area_area_entered
+			)
 
 
 # =====================================
@@ -117,6 +130,7 @@ func _physics_process(delta: float):
 	tiempo_desde_toque -= delta
 
 	if Input.is_action_just_pressed("ui_right"):
+
 		if ultima_direccion == 1 and tiempo_desde_toque > 0:
 			corriendo = true
 		else:
@@ -124,13 +138,14 @@ func _physics_process(delta: float):
 			tiempo_desde_toque = tiempo_doble_toque
 
 	if Input.is_action_just_pressed("ui_left"):
+
 		if ultima_direccion == -1 and tiempo_desde_toque > 0:
 			corriendo = true
 		else:
 			ultima_direccion = -1
 			tiempo_desde_toque = tiempo_doble_toque
 
-	# MOVIMIENTO
+	# MOVIMIENTO HORIZONTAL
 	var direccion = Input.get_axis("ui_left", "ui_right")
 
 	if direccion == 0:
@@ -148,10 +163,13 @@ func _physics_process(delta: float):
 		sprite.flip_h = true
 
 	# SALTO Y DOBLE SALTO
-	var quiere_saltar = (
-		Input.is_action_just_pressed("ui_up")
-		or Input.is_action_just_pressed("saltar")
-	)
+	var quiere_saltar = Input.is_action_just_pressed("ui_up")
+
+	if InputMap.has_action("saltar"):
+		quiere_saltar = (
+			quiere_saltar
+			or Input.is_action_just_pressed("saltar")
+		)
 
 	if quiere_saltar and saltos_restantes > 0:
 
@@ -176,49 +194,79 @@ func _physics_process(delta: float):
 		else:
 			cargando_salto = false
 
-	# PODER DE REPULSIÓN
-	if Input.is_action_just_pressed("ui_down"):
-		if puede_usar_poder:
-			usar_repulsion()
 
-	# MOVIMIENTO Y COLISIONES
+	# APLICAR MOVIMIENTO
 	move_and_slide()
 
 
 # =====================================
-# RECOGER HELIO
+# RECOGER MONEDAS
 # =====================================
 
 func _on_pickup_area_area_entered(area: Area2D):
 
-	# Comprobar que sea una moneda de helio
-	if not area.is_in_group("moneda_helio"):
+	# MONEDA DE HELIO
+	if area.is_in_group("moneda_helio"):
+
+		if not area.monitoring:
+			return
+
+		area.set_deferred("monitoring", false)
+		area.set_deferred("monitorable", false)
+
+		var cantidad_helio: int = int(
+			area.get("valor_helio")
+		)
+
+		helio += cantidad_helio
+
+		# AUMENTAR SALTO
+		fuerza_salto += aumento_salto_por_moneda
+
+		actualizar_contador()
+
+		mostrar_aviso(
+			"+" + str(cantidad_helio) + " de helio"
+		)
+
+		area.queue_free()
+
+		print("Helio: ", helio)
+		print("Fuerza de salto: ", fuerza_salto)
+
 		return
 
-	# Evitar recogerla más de una vez
-	area.set_deferred("monitoring", false)
-	area.set_deferred("monitorable", false)
+	# MONEDA DE CARBONO
+	if area.is_in_group("moneda_carbono"):
 
-	# Obtener el valor de la moneda
-	var cantidad: int = int(area.get("valor_helio"))
+		if not area.monitoring:
+			return
 
-	# AUMENTAR HELIO
-	helio += cantidad
+		area.set_deferred("monitoring", false)
+		area.set_deferred("monitorable", false)
 
-	# MEJORAR EL SALTO
-	fuerza_salto += aumento_salto_por_moneda
+		var cantidad_carbono: int = int(
+			area.get("valor_carbono")
+		)
 
-	# ACTUALIZAR CONTADOR
-	actualizar_contador()
+		moneda_carbono -= cantidad_carbono
 
-	# MOSTRAR MENSAJE
-	mostrar_aviso("+" + str(cantidad) + " de helio")
+		# DISMINUIR SALTO
+		fuerza_salto = maxf(
+			100.0,
+			fuerza_salto - aumento_salto_por_moneda
+		)
 
-	# ELIMINAR MONEDA
-	area.queue_free()
+		actualizar_contador()
 
-	print("Helio: ", helio)
-	print("Fuerza de salto: ", fuerza_salto)
+		mostrar_aviso(
+			"-" + str(cantidad_carbono) + " de carbono"
+		)
+
+		area.queue_free()
+
+		print("Carbono: ", moneda_carbono)
+		print("Fuerza de salto: ", fuerza_salto)
 
 
 # =====================================
@@ -227,11 +275,16 @@ func _on_pickup_area_area_entered(area: Area2D):
 
 func actualizar_contador():
 
-	contador.text = "Helio: " + str(helio)
+	if contador != null:
+
+		contador.text = (
+			"Helio: " + str(helio)
+			+ " | Carbono: " + str(moneda_carbono)
+		)
 
 
 # =====================================
-# MENSAJE +10 DE HELIO
+# MENSAJE FLOTANTE
 # =====================================
 
 func mostrar_aviso(mensaje: String):
@@ -240,7 +293,12 @@ func mostrar_aviso(mensaje: String):
 
 	aviso.text = mensaje
 	aviso.position = Vector2(25, 60)
-	aviso.add_theme_font_size_override("font_size", 24)
+
+	aviso.add_theme_font_size_override(
+		"font_size",
+		24
+	)
+
 	aviso.modulate = Color(1, 1, 0.3, 1)
 
 	hud.add_child(aviso)
@@ -265,46 +323,3 @@ func mostrar_aviso(mensaje: String):
 	await tween.finished
 
 	aviso.queue_free()
-
-
-# =====================================
-# PODER DE REPULSIÓN
-# =====================================
-
-func usar_repulsion():
-
-	puede_usar_poder = false
-
-	var objetos = get_tree().get_nodes_in_group("empujables")
-
-	for objeto in objetos:
-
-		if not objeto is RigidBody2D:
-			continue
-
-		var distancia = global_position.distance_to(
-			objeto.global_position
-		)
-
-		if distancia <= radio_poder:
-
-			var direccion = (
-				objeto.global_position - global_position
-			)
-
-			if direccion.length() > 0:
-				direccion = direccion.normalized()
-			else:
-				direccion = Vector2.UP
-
-			var intensidad = fuerza_repulsion * (
-				1.0 - distancia / radio_poder
-			)
-
-			objeto.apply_central_impulse(
-				direccion * intensidad
-			)
-
-	await get_tree().create_timer(tiempo_recarga).timeout
-
-	puede_usar_poder = true
