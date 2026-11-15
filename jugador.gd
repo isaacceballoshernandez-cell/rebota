@@ -2,6 +2,9 @@
 extends CharacterBody2D
 
 @onready var sprite = $perro
+@onready var contador = $CanvasLayer/Contador
+
+
 
 # MOVIMIENTO
 var velocidad: float = 300.0
@@ -32,7 +35,6 @@ var puede_usar_poder: bool = true
 var tiempo_recarga: float = 1.5
 var radio_poder: float = 180.0
 var fuerza_repulsion: float = 900.0
-
 
 func _physics_process(delta: float):
 
@@ -101,13 +103,11 @@ func _physics_process(delta: float):
 	# MOVIMIENTO Y COLISIONES
 	move_and_slide()
 
-
-# ACTIVAR REPULSIÓN
+# PODER DE REPULSIÓN
 func usar_repulsion():
 
 	puede_usar_poder = false
 
-	# BUSCAR OBJETOS CERCANOS
 	var objetos = get_tree().get_nodes_in_group("empujables")
 
 	for objeto in objetos:
@@ -130,6 +130,5 @@ func usar_repulsion():
 
 			objeto.apply_central_impulse(direccion * intensidad)
 
-	# RECARGAR PODER
 	await get_tree().create_timer(tiempo_recarga).timeout
 	puede_usar_poder = true
