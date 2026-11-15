@@ -3,54 +3,92 @@
 [ext_resource type="Texture2D" uid="uid://d0e8000n7g02p" path="res://fondo 12.png" id="1_5lfti"]
 [ext_resource type="Script" uid="uid://dcpq5bg61iix6" path="res://jugador.gd" id="1_dn5c8"]
 [ext_resource type="Texture2D" uid="uid://bqv6nt8isqskr" path="res://perro.png" id="2_dn5c8"]
+[ext_resource type="Script" uid="uid://bbq53tf33a4y8" path="res://elio.gd" id="5_8bn17"]
+[ext_resource type="Texture2D" uid="uid://kxsn485a0uyj" path="res://moneda 3.png" id="5_76yo1"]
 [ext_resource type="Texture2D" uid="uid://bkkjn5jck26p4" path="res://plataforma.png" id="5_fl65m"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sbvtr"]
-size = Vector2(4294.1895, 315.61652)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ksya"]
+size = Vector2(27.36668, 8281.708)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_48d6w"]
+size = Vector2(11.962852, 19.483147)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5lfti"]
-size = Vector2(13.408642, 15.337645)
+size = Vector2(13.393389, 15.027771)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sbvtr"]
+radius = 42.537918
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ahry"]
 size = Vector2(247, 137)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_48d6w"]
+radius = 32.0
+
 [node name="Node2D" type="Node2D" unique_id=951205427]
 position = Vector2(0, 1)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=36413890]
-position = Vector2(440.00003, -105)
-scale = Vector2(0.46388263, 0.44223827)
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1352296074]
-position = Vector2(551.8637, -2623.0205)
-scale = Vector2(1, 1.049)
-texture = ExtResource("1_5lfti")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=323836791]
-position = Vector2(612.22406, 1320.5553)
-scale = Vector2(1, 0.99999994)
-shape = SubResource("RectangleShape2D_sbvtr")
 
 [node name="background" type="Sprite2D" parent="." unique_id=56417468]
 position = Vector2(-21384, -4273)
 scale = Vector2(0.6166667, 0.6148148)
 
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=36413890]
+position = Vector2(448.00003, -97)
+scale = Vector2(0.46388263, 0.44223827)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1352296074]
+position = Vector2(586.35516, -2641.11)
+scale = Vector2(1, 1.049)
+texture = ExtResource("1_5lfti")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=285236110]
+position = Vector2(586.35516, 5370.961)
+scale = Vector2(152.50388, 1)
+shape = SubResource("RectangleShape2D_7ksya")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=13674253]
+position = Vector2(-3587.1428, -2384.621)
+scale = Vector2(152.50388, 1)
+shape = SubResource("RectangleShape2D_7ksya")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1987771085]
+position = Vector2(4725.3335, -2689.6597)
+scale = Vector2(152.50388, 1)
+shape = SubResource("RectangleShape2D_7ksya")
+
 [node name="Jugador" type="CharacterBody2D" parent="." unique_id=18876813]
-position = Vector2(624, 311)
+position = Vector2(656, -297)
+scale = Vector2(0.6340544, 0.82434684)
 script = ExtResource("1_dn5c8")
 
 [node name="Camera2D" type="Camera2D" parent="Jugador" unique_id=124594578]
-position = Vector2(-40, -152)
+position = Vector2(37.851654, 601.68854)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Jugador" unique_id=1090555001]
+position = Vector2(-44.487427, 756.99976)
+shape = SubResource("RectangleShape2D_48d6w")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Jugador" unique_id=1067011322]
+position = Vector2(151.40657, 756.96295)
+shape = SubResource("RectangleShape2D_48d6w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Jugador" unique_id=926263051]
-position = Vector2(372, -83.999985)
+position = Vector2(50.46887, 795.78156)
 scale = Vector2(8.949454, 6.7807026)
 shape = SubResource("RectangleShape2D_5lfti")
 
 [node name="perro" type="Sprite2D" parent="Jugador" unique_id=881553505]
-position = Vector2(368, -112)
+position = Vector2(37.851654, 756.9628)
 scale = Vector2(0.46388263, 0.44223827)
 texture = ExtResource("2_dn5c8")
+
+[node name="pickupArea" type="Area2D" parent="Jugador/perro" unique_id=22006837]
+position = Vector2(-81.59741, -1711.6628)
+scale = Vector2(2.1557178, 2.2612245)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jugador/perro/pickupArea" unique_id=1391586256]
+position = Vector2(50.468853, 795.7815)
+shape = SubResource("CircleShape2D_sbvtr")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=814046759]
 position = Vector2(320, 287)
@@ -236,13 +274,26 @@ shape = SubResource("RectangleShape2D_6ahry")
 position = Vector2(-1112, -152)
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=715125281]
-position = Vector2(7.9999847, -8.0000305)
+position = Vector2(87.99999, -8.0000305)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("5_fl65m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4/StaticBody2D4" unique_id=110734379]
-position = Vector2(11.5, -8)
+position = Vector2(88, -8)
 shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="elio5" type="Area2D" parent="." unique_id=1022493535 groups=["elio"]]
+position = Vector2(336, -1193)
+script = ExtResource("5_8bn17")
+
+[node name="Sprite2D" type="Sprite2D" parent="elio5" unique_id=10378734]
+position = Vector2(327.99997, 150.99998)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_76yo1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="elio5" unique_id=995207869]
+position = Vector2(328, 151)
+shape = SubResource("CircleShape2D_48d6w")
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="." unique_id=295429994]
 position = Vector2(1024, -41)
@@ -255,3 +306,56 @@ texture = ExtResource("5_fl65m")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6" unique_id=697325817]
 position = Vector2(11.5, -8)
 shape = SubResource("RectangleShape2D_6ahry")
+
+[node name="elio4" type="Area2D" parent="." unique_id=1765503706 groups=["elio"]]
+position = Vector2(672, -817)
+script = ExtResource("5_8bn17")
+
+[node name="Sprite2D" type="Sprite2D" parent="elio4" unique_id=564446628]
+position = Vector2(327.99997, 150.99998)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_76yo1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="elio4" unique_id=1987671762]
+position = Vector2(328, 151)
+shape = SubResource("CircleShape2D_48d6w")
+
+[node name="elio3" type="Area2D" parent="." unique_id=1202924496 groups=["elio"]]
+position = Vector2(152, -569)
+script = ExtResource("5_8bn17")
+
+[node name="Sprite2D" type="Sprite2D" parent="elio3" unique_id=680347880]
+position = Vector2(327.99997, 150.99998)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_76yo1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="elio3" unique_id=1751043123]
+position = Vector2(328, 151)
+shape = SubResource("CircleShape2D_48d6w")
+
+[node name="elio2" type="Area2D" parent="." unique_id=833001589 groups=["elio"]]
+position = Vector2(696, -337)
+script = ExtResource("5_8bn17")
+
+[node name="Sprite2D" type="Sprite2D" parent="elio2" unique_id=961821668]
+position = Vector2(327.99997, 150.99998)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_76yo1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="elio2" unique_id=415544438]
+position = Vector2(328, 151)
+shape = SubResource("CircleShape2D_48d6w")
+
+[node name="elio" type="Area2D" parent="." unique_id=1643182164 groups=["elio"]]
+script = ExtResource("5_8bn17")
+
+[node name="Sprite2D" type="Sprite2D" parent="elio" unique_id=2044665873]
+position = Vector2(327.99997, 150.99998)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_76yo1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="elio" unique_id=1962809416]
+position = Vector2(328, 151)
+shape = SubResource("CircleShape2D_48d6w")
+
+[connection signal="area_entered" from="Jugador/perro/pickupArea" to="Jugador" method="_on_pickup_area_area_entered"]
